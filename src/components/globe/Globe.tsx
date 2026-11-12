@@ -49,6 +49,8 @@ interface GlobeProps {
   pattern: PatternConfig;
   /** Whether the globe is currently visible (triggers entrance animation) */
   isVisible?: boolean;
+  /** Optional accessible description of the region shown. */
+  ariaLabel?: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -381,7 +383,10 @@ export const Globe = component$<GlobeProps>((props) => {
       width={480}
       height={480}
       class="mx-auto w-full max-w-[480px] h-auto touch-none"
-      aria-label="Interactive globe showing ecosystem location — drag to rotate"
+      aria-label={
+        props.ariaLabel ??
+        "Interactive globe showing ecosystem location — drag to rotate"
+      }
       role="img"
     />
   );

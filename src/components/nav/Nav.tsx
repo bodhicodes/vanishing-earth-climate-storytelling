@@ -34,6 +34,12 @@ export const Nav = component$(() => {
         {/* ── Right-side links ─────────────────────────────────────── */}
         <div class="flex items-center gap-5">
           <a
+            href="/story"
+            class="text-sm text-slate-100 hover:text-white transition-colors"
+          >
+            Story
+          </a>
+          <a
             href="/about"
             class="text-sm text-slate-100 hover:text-white transition-colors"
           >
